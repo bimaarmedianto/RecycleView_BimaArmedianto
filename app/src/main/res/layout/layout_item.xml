@@ -10,22 +10,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:background="#ECE4E4"
-        >
-        <ImageView
+        android:background="#ECE4E4">
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/imageItem"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:id="@+id/imageItem"
-            android:src="@mipmap/ic_launcher">
-        </ImageView>
+            android:src="@mipmap/ic_launcher"
+            app:civ_border="true"
+            app:civ_border_color="#FFFFFF"
+            app:civ_shadow="true"
+            app:civ_shadow_radius="0">
+        </com.mikhaellopez.circularimageview.CircularImageView>
         <TextView
             android:id="@+id/titelItem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@+id/imageItem"
-            android:layout_marginLeft="10dp"
-            android:text="Title"
-            android:textSize="20dp"
+            android:layout_marginStart="10sp"
+            android:text="@string/title"
+            android:textSize="20sp"
             android:textColor="#292626">
         </TextView>
         <TextView
@@ -34,9 +37,9 @@
             android:layout_height="wrap_content"
             android:layout_toEndOf="@+id/imageItem"
             android:layout_marginTop="30dp"
-            android:layout_marginLeft="10dp"
-            android:text="desc"
-            android:textSize="14dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/desc"
+            android:textSize="14sp"
             android:textColor="#6B6868">
         </TextView>
     </RelativeLayout>
